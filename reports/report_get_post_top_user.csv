@@ -1,0 +1,24 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec
+Initialize Page,20,0,0,1,1,2,0,2,0.000%,.47300,0.00,0.00
+S00.00 Get list post of user Huskywannafly,7,710,434,1208,1709,1709,251,1709,0.000%,1.40732,165.39,1.14
+Scan User Via Followers,1,0,0,0,0,0,0,0,0.000%,1000.00000,0.00,0.00
+S00.00 Get list post of user please,4,401,295,727,727,727,229,727,0.000%,2.49377,161.11,2.00
+S00.00 Get list post of user a_dreamer,12,295,182,576,576,618,115,618,0.000%,3.38600,258.05,2.73
+S00.00 Get list post of user Forensix,6,308,282,368,419,419,230,419,0.000%,3.24149,212.20,2.61
+S00.00 Get list post of user wasabi,7,217,182,248,372,372,158,372,0.000%,4.59318,186.85,3.69
+S00.00 Get list post of user Mytwingo,3,251,235,287,287,287,231,287,0.000%,3.97878,203.67,3.21
+S00.00 Get list post of user samurice,12,322,270,411,411,643,214,643,0.000%,3.10158,180.56,2.50
+S00.00 Get list post of user Cherish_Vu,3,404,322,589,589,589,302,589,0.000%,2.47321,210.72,2.00
+S00.00 Get list post of user inrajakha,2,424,270,579,579,579,270,579,0.000%,2.35571,126.33,1.90
+S00.00 Get list post of user Levi,4,368,363,463,463,463,276,463,0.000%,2.71739,136.41,2.18
+S00.00 Get list post of user deanrazorbak,2,313,247,380,380,380,247,380,0.000%,3.18979,194.27,2.58
+S00.00 Get list post of user loveless2001,5,320,275,307,520,520,231,520,0.000%,3.12305,149.57,2.53
+S00.00 Get list post of user quoravn,4,362,319,571,571,571,228,571,0.000%,2.76243,262.82,2.22
+S00.00 Get list post of user AlexChristin,4,365,325,513,513,513,281,513,0.000%,2.73038,213.05,2.21
+S00.00 Get list post of user EzioSkywalker98,7,1042,360,764,4927,4927,244,4927,0.000%,.95904,144.51,0.78
+S00.00 Get list post of user VVesper,5,285,275,279,370,370,246,370,0.000%,3.50385,151.74,2.82
+S00.00 Get list post of user NhatBaoVN,17,247,211,390,397,407,93,407,0.000%,4.03513,171.94,3.26
+S00.00 Get list post of user kiaconchim,4,325,268,498,498,498,253,498,0.000%,3.07220,243.06,2.48
+S00.00 Get list post of user Tornad,4,308,290,334,334,334,285,334,0.000%,3.24412,277.35,2.61
+S00.00 Get list post of user HienTrang,3,292,288,338,338,338,252,338,0.000%,3.41297,132.49,2.75
+TOTAL,136,317,275,513,618,1709,0,4927,0.000%,3.15092,183.34,2.15
