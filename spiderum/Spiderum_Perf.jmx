@@ -1859,7 +1859,7 @@ fstreamWrite.close();
           </hashTree>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Get Detail Post" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Get Detail Post" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4143,11 +4143,11 @@ vars.put(&quot;postTitle_JavaCode&quot;, postTitle)
           </hashTree>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="08. Scenario Chat To User" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="08. Scenario Chat To User" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">500</stringProp>
+          <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
@@ -4158,9 +4158,21 @@ vars.put(&quot;postTitle_JavaCode&quot;, postTitle)
       </ThreadGroup>
       <hashTree>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-          <stringProp name="filename">MyInboxFull.csv</stringProp>
+          <stringProp name="filename">MySettingChat.csv</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
-          <stringProp name="variableNames">username,password,toUserInbox,chatBody</stringProp>
+          <stringProp name="variableNames">username,password,chatBody</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="filename">UserList.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">userId,toUserInbox</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
           <stringProp name="delimiter">,</stringProp>
           <boolProp name="quotedData">false</boolProp>
@@ -4508,7 +4520,7 @@ vars.put(&quot;inboxData&quot;, inboxData);
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="Authorization" elementType="Header">
                   <stringProp name="Header.name">Authorization</stringProp>
-                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjcwNTUsInN0YXR1cyI6MSwibmFtZSI6InRlc3R5b3BtYWlsIiwiZmJfaWQiOm51bGwsImRpc3BsYXlfbmFtZSI6InRlc3R5b3BtYWlsIiwiZW1haWwiOiJ0ZXN0QHlvcG1haWwuY29tIiwiZ3JhdmF0YXIiOiJhNGQwYTU1OTA5OGQxMTM3YWYzYWI5ZThkMDNlN2FkOCIsImFiYW5kb24iOnsiZ2xvYmFsIjp7fSwiY2F0ZWdvcnkiOltdfSwicm9sZSI6bnVsbCwiaWF0IjoxNjA1ODQ2MDM3LCJleHAiOjE2MDg0MzgwMzd9.IOB-T9QPiVS_EwzJHWozeYCAplu19MST2MgKanHHiYc</stringProp>
+                  <stringProp name="Header.value">Bearer ${tokenUser}</stringProp>
                 </elementProp>
                 <elementProp name="Referer" elementType="Header">
                   <stringProp name="Header.name">Referer</stringProp>
@@ -4624,7 +4636,7 @@ vars.put(&quot;inboxData&quot;, inboxData);
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;body&quot;: &quot;Chào bạn ${toUserInbox}! &lt;hr/&gt; Đây là thông tin từ Ntech cung cấp cho bạn. &lt;br/&gt; ${inboxData} &lt;hr/&gt; Dưới đây là thông điệp mình gửi tặng bạn: &lt;br/&gt; ${chatBody} &lt;hr/&gt; --Ntech--&quot;,&#xd;
+  &quot;body&quot;: &quot;Chào bạn ${toUserInbox}! &lt;hr/&gt; Ntech chúc bạn và người thân một giáng sinh vui vẻ! &lt;br/&gt; &lt;img width=&apos;200&apos; height=&apos;100&apos; src=&apos;http://blog.ntechdevelopers.com/wp-content/uploads/2020/12/132417488_2043208942485253_7024503610059837498_o.jpg&apos; /&gt; &lt;br/&gt; ${chatBody} &lt;hr/&gt; --Ntech--&quot;,&#xd;
   &quot;chat_group_id&quot;: &quot;${chatGroupId}&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
@@ -4666,7 +4678,7 @@ vars.put(&quot;inboxData&quot;, inboxData);
                 </elementProp>
                 <elementProp name="Authorization" elementType="Header">
                   <stringProp name="Header.name">Authorization</stringProp>
-                  <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjcwNTUsInN0YXR1cyI6MSwibmFtZSI6InRlc3R5b3BtYWlsIiwiZmJfaWQiOm51bGwsImRpc3BsYXlfbmFtZSI6InRlc3R5b3BtYWlsIiwiZW1haWwiOiJ0ZXN0QHlvcG1haWwuY29tIiwiZ3JhdmF0YXIiOiJhNGQwYTU1OTA5OGQxMTM3YWYzYWI5ZThkMDNlN2FkOCIsImFiYW5kb24iOnsiZ2xvYmFsIjp7fSwiY2F0ZWdvcnkiOltdfSwicm9sZSI6bnVsbCwiaWF0IjoxNjA1ODQ2MDM3LCJleHAiOjE2MDg0MzgwMzd9.IOB-T9QPiVS_EwzJHWozeYCAplu19MST2MgKanHHiYc</stringProp>
+                  <stringProp name="Header.value">Bearer ${tokenUser}</stringProp>
                 </elementProp>
                 <elementProp name="Content-Type" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>

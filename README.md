@@ -30,7 +30,12 @@ http://blog.ntechdevelopers.com/update-script-jmeter-spiderum-cach-ma-toi-to-chu
 http://blog.ntechdevelopers.com/update-script-jmeter-spiderum-script-performance-test-khong-phai-chi-record-la-xong-con-nhieu-thu-hay-ho-lam/
 - Bài viết thứ 13: Update script jmeter spiderum - Làm sao để có thể chuẩn bị data cho cả triệu CCUs
 http://blog.ntechdevelopers.com/update-script-jmeter-spiderum-lam-sao-de-co-the-chuan-bi-data-cho-ca-trieu-ccus/
-
+- Bài viết thứ 14: Bắt đầu chạy kiểm thử hiệu năng - Chúc mừng bạn đã nằm trong tầm ngắm của tôi
+http://blog.ntechdevelopers.com/bat-dau-chay-kiem-thu-hieu-nang-chuc-mung-ban-da-nam-trong-tam-ngam-cua-toi/
+- Bài viết thứ 15: Báo cáo kiểm thử hiệu năng spiderum và phân tích báo cáo sau khi chạy script
+http://blog.ntechdevelopers.com/bao-cao-kiem-thu-hieu-nang-spiderum-va-phan-tich-bao-cao-sau-khi-chay-script/
+- Bài viết thứ 16: Tổng kết chiến dịch kiểm thử hiệu năng spiderum
+http://blog.ntechdevelopers.com/tong-ket-chien-dich-kiem-thu-hieu-nang-spiderum/
 
 --
 Nam Vu
